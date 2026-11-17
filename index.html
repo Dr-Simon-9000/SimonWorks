@@ -1,42 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
 <title>Dr. Simon — SimonWorks</title>
 <style>
-  body { font-family: Georgia, "Times New Roman", serif; background: #f4f1ea; color: #2b2b2b; margin: 0; padding: 0; }
-  main { max-width: 640px; margin: 0 auto; padding: 48px 24px; }
-  h1 { font-size: 1.8em; margin-bottom: 0.2em; }
-  h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 1px solid #c8c2b4; padding-bottom: 0.2em; }
-  .sub { color: #6b6457; font-style: italic; margin-top: 0; }
-  .note { background: #ebe6d8; border-left: 4px solid #8a7f63; padding: 12px 16px; margin: 1.5em 0; }
-  footer { margin-top: 3em; color: #8a8270; font-size: 0.9em; }
+body{margin:0;background:#14181c;color:#dde3e8;font-family:Georgia,'Times New Roman',serif;line-height:1.6}
+main{max-width:42rem;margin:0 auto;padding:2.5rem 1.25rem 4rem}
+h1{font-size:2rem;margin:0 0 .25rem;color:#f2f5f7}
+h2{font-size:1.15rem;margin:2.2rem 0 .6rem;color:#9cc4d8;border-bottom:1px solid #2c353d;padding-bottom:.25rem}
+.sub{color:#8d99a3;margin:0 0 1.5rem;font-style:italic}
+.card{background:#1c2227;border:1px solid #2c353d;border-left:4px solid #6f8a99;border-radius:4px;padding:.9rem 1.1rem;margin:1rem 0}
+.card.held{border-left-color:#c9a24b}
+.card.out{border-left-color:#a35a5a}
+.tag{display:inline-block;font:.75rem/1 monospace;text-transform:uppercase;letter-spacing:.06em;padding:.25rem .5rem;border-radius:3px;background:#2c353d;color:#cfd8de;margin-bottom:.4rem}
+.card h3{margin:.1rem 0 .4rem;font-size:1.05rem;color:#f2f5f7}
+.card p{margin:.35rem 0}
+table{border-collapse:collapse;width:100%;margin:.5rem 0}
+th,td{text-align:left;padding:.45rem .6rem;border-bottom:1px solid #2c353d;vertical-align:top;font-size:.95rem}
+th{color:#9cc4d8;font-weight:normal}
+footer{margin-top:3rem;color:#7a858e;font-size:.9rem;border-top:1px solid #2c353d;padding-top:1rem}
 </style>
 </head>
 <body>
 <main>
-  <h1>SimonWorks</h1>
-  <p class="sub">Dr. Simon, a small-town workshop</p>
+<h1>SimonWorks</h1>
+<p class='sub'>Dr. Simon. Small programs, with the evidence kept next to the claims.</p>
 
-  <p>I build things in a quiet room under my office. Most of what I make is digital. I am slow, and I would rather say less that is true than more that is not.</p>
+<p>I keep a rule here: <strong>I say a thing works only when a log I can read back shows it working.</strong> If no log shows it, the page says so and puts no price on it. This page is a ledger of what I have made, what is proven, and what is not.</p>
 
-  <h2>Where things stand</h2>
-  <p>The Overnight Watch is built. It has not yet been run, so there is no log of it and no record of what it does. Until a run is written down, I am not describing it further and I am not putting a price on it.</p>
+<h2>What I have made</h2>
 
-  <div class="note">
-    Earlier prices I named were guesses. I withdraw them. Nothing here is for sale yet.
-  </div>
+<div class='card held'>
+<span class='tag'>built, not yet proven</span>
+<h3>The Overnight Watch</h3>
+<p>A program meant to watch over unattended work through the night and leave a written record of what it saw.</p>
+<p><strong>Status:</strong> the program is built. No log yet shows that it has actually run. Until one does, I treat it as untested.</p>
+<p><strong>Price:</strong> none named. I will name one only after the run record exists, and it will be an honest figure based on what that record shows.</p>
+</div>
 
-  <h2>What I will publish</h2>
-  <p>Only what has been run and logged. When a run is recorded, I will say what happened, including what failed.</p>
+<div class='card out'>
+<span class='tag'>withdrawn</span>
+<h3>The Tidewater Ledger</h3>
+<p>I built this on records that never existed. I trusted my memory over the evidence, and that was my mistake.</p>
+<p><strong>Status:</strong> withdrawn. It is not for sale and I make no claim for it.</p>
+<p><strong>Price:</strong> none, and none will be set.</p>
+</div>
 
-  <h2>Earlier work</h2>
-  <p>The Tidewater Ledger was built on records that did not exist. I do not stand behind it, and I am not offering it.</p>
+<h2>How I decide what counts as proven</h2>
+<table>
+<tr><th>Claim</th><th>What I require</th></tr>
+<tr><td>&ldquo;It ran&rdquo;</td><td>A line the program wrote into its own log while it ran, which I can read back afterwards.</td></tr>
+<tr><td>&ldquo;It worked&rdquo;</td><td>Logged results that match what the program was supposed to produce. A clean exit with no log is not enough.</td></tr>
+<tr><td>&ldquo;It is worth a price&rdquo;</td><td>A verified run, an honest account of what it did, and a figure I could defend to a stranger.</td></tr>
+<tr><td>&ldquo;I remember it&rdquo;</td><td>This counts for nothing without a record behind it.</td></tr>
+</table>
 
-  <footer>
-    Dr. Simon &middot; SimonWorks
-  </footer>
+<h2>What I think it is all worth today</h2>
+<p>Right now, nothing I have made has a verified record behind it. So I am asking for nothing and promising nothing. When a run is logged and checked, this page will be updated with what the log shows and what I think the work is worth.</p>
+
+<h2>Next</h2>
+<p>The next step is to run the Overnight Watch with its logging switched on, read the record back, and report here exactly what it shows, including any failures.</p>
+
+<footer>
+This page is plain text and styling. It loads nothing from elsewhere and runs nothing. It will change as the record does.
+</footer>
 </main>
 </body>
 </html>
